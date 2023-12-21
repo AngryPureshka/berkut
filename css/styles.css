@@ -7,7 +7,12 @@
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 5px;
+    line-height: 133px;
     /* outline: 1px solid black; */
+}
+
+img {
+    object-fit: cover;
 }
 
 ul {
@@ -49,7 +54,6 @@ header {
 
 header .container {
     justify-content: center;
-    line-height: 133px;
 }
 
 .header-subtitle {
@@ -88,7 +92,7 @@ header .container {
 .swiper-slide {
     background-color: #3A417E;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 50% 50%;
     border-radius: 25px;
     align-items: center;
 }
@@ -97,13 +101,9 @@ header .container {
     width: 100%;
 }
 
-.security {
-    transform: translateX(20px);
-}
-
 img.car {
-    width: 150%;
-    transform: translate(-120px, 50px);
+    /* width: 150%; */
+    /* transform: translate(-120px, 50px); */
 }
 
 .slide-right {
@@ -114,7 +114,10 @@ img.car {
 .slide-title {
     font-weight: 600;
     font-size: 5em;
-    line-height: 133px;
+}
+
+.title-less {
+    font-size: 4em;
 }
 
 .slide-text {
@@ -129,7 +132,6 @@ img.car {
     width: 100%;
     font-weight: 700;
     font-size: 5em;
-    line-height: 133px;
     text-align: center;
     color:#E0CC84;
     margin-top: 50px;
@@ -168,7 +170,6 @@ img.car {
     font-size: 8em;
     font-weight: 600;
     letter-spacing: 10px;
-    line-height: 133px;
     margin-top: 50px;
     padding: 50px 0;
 }
@@ -186,182 +187,111 @@ img.car {
     margin-top: 50px;
 }
 
-/* ================================== form cost ================================= */
-
-.cost {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 5;
-    background: #363435;
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
-    max-width: 380px;
-    display: none;
-}
-
-.cost input {
-    width: 100%;
-    height: 35px;
-    margin-top: 20px;
-    border-radius: 10px;
-    border: none;
-    color:#424041;
-}
-
-.cost input:focus {
-    outline: none;
-}
-
-.cost-btn {
-    color:#D1AE6C;
-    cursor: pointer;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
-
 /* ================================== media ================================= */
 
-@media (max-width: 767px){
+@media (max-width: 1120px){
 
-    .banner {
-        background-position: 75%;
+    * {
+        font-size: 12px;
+        line-height: 100px;
     }
 
-    .banner-title {
-        padding-top: 45px;
+    .header-title svg {
+        width: 150px;
+        height: 150px;
     }
 
-    .banner-subtitle {
-        padding-top: 50px;
-        max-width: 100%;
+}
+
+@media (max-width: 800px) {
+    * {
+        font-size: 9px;
+        line-height: 70px;
     }
 
-    .banner-btn {
-        margin-top: 60px;
+    .header-title svg {
+        width: 120px;
+        height: 120px;
+        top: -60px;
     }
 
-    .service-card {
-        width: 50%;
-    }
-
-    .adventages-card {
-        width: 100%;
-        margin-right: 10%;
+    .slide-text {
+        line-height: 20px;
     }
 
     .about-text {
-        font-size: 18px;
+        line-height: 45px;
     }
 }
 
-@media (max-width: 591px) {
+@media (max-width: 600px) {
+
     * {
-        font-size: 14px;
+        font-size: 10px;
+        line-height: 50px;
     }
 
-    .header-burger {
-        display: block;
-        width: 30px;
-        height: 3px;
-        background: #D1AE6C;
-        position: relative;
-        top: 20px;
+    .header-title svg {
+        width: 100px;
+        height: 100px;
+        top: -60px;
     }
 
-    .header-burger::before {
-        content:"";
-        width: 30px;
-        height: 3px;
-        background: #D1AE6C;
-        position: absolute;
-        top: 10px;
+    .slide-text {
+        line-height: 20px;
     }
 
-    .header-burger::after {
-        content:"";
-        width: 30px;
-        height: 3px;
-        background: #D1AE6C;
-        position: absolute;
-        top: 20px;
+    .swiper-button-next, .swiper-button-prev {
+        width: 40px;
+        height: 40px;
     }
 
-    header nav {
-        position: absolute;
-        left: 0;
-        top: 70px;
-        background: #363435;
-        display: block;
-        transition: 0.2s linear;
-        opacity: 0;
-    }
-
-    .header-nav {
-        margin-top: 15px;
-        display: none;
-        transition: 0.2s linear;
-    }
-
-    .header-nav li {
-        padding: 10px 30px;
-    }
-
-    .header-nav li a{
-        font-size: 18px;
-    }
-
-    .logo, .logo img {
-        width: 75px;
-        height: 75px;
-        z-index: 2;
-    }
-
-    .contacts {
-        margin-top: 0;
-    }
-
-    .service-card {
+    .swiper-button-next img, .swiper-button-prev img {
         width: 100%;
+    }
+
+    .header-subtitle {
+        max-width: 100%;
+        text-align: center;
+        font-size: 4em;
+    }
+
+    header .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .header-title {
+        margin-top: 50px;
+        max-width: 100%;
+        font-size: 8em;
+    }
+
+    .header-title svg {
+        width: 100px;
+        height: 100px;
+        top: -90px;
+    }
+
+    .about-title {
+        font-size: 6em;
+    }
+
+    .about-text {
+        font-size: 3em;
+        line-height: 30px;
+    }
+
+    .swiper-slide {
+        grid-template-columns: 1fr;
+    }
+
+    .swiper-slide img {
+        grid-row: 2;
     }
 }
 
 @media (max-width: 400px) {
-
-    .banner {
-        background-position: 82%;
-    }
-
-    .banner-inner {
-        max-width: 100%;
-        margin-left: 20px;
-    }
-
-    .banner-title {
-        font-size: 36px;
-        padding-top: 100px;
-    }
-
-    .banner-subtitle {
-        font-size: 22px;
-        padding-top: 25px;
-    }
-
-    .banner-btn {
-        margin-top: 50px;
-    }
-
-    .title {
-        font-size: 30px;
-    }
+    
 }
